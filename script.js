@@ -44,7 +44,6 @@ function playRound(playerSelection, computerSelection) {
 
 const playerSelection = "ScISSORS";
 const computerSelection = getComputerChoice();
-console.log(computerSelection);
 console.log(playRound(playerSelection, computerSelection));
 
 
