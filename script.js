@@ -72,7 +72,20 @@ function game() {
     else if (roundResult === "It's a draw!") {
       // do nothing
     }
-    console.log(`The score so far is - PLAYER: ${playerPoint} ${isPoint(playerPoint)} COMPUTER: ${computerPoint} ${isPoint(computerPoint)}`);
+    
+    if (i < 4) {
+      console.log(`The score so far is - PLAYER: ${playerPoint} ${isPoint(playerPoint)} COMPUTER: ${computerPoint} ${isPoint(computerPoint)}`);
+    } else {
+      console.log(`Final Score - PLAYER: ${playerPoint} ${isPoint(playerPoint)} COMPUTER: ${computerPoint} ${isPoint(computerPoint)}`);
+    }
+  }
+
+  if (playerPoint > computerPoint) {
+    console.log("RESULT: YOU WIN!!!");
+  } else if (computerPoint > playerPoint) {
+    console.log("RESULT: You lose! Try again!");
+  } else if (playerPoint === computerPoint) {
+    console.log("RESULT: It's a tie! Try again!");
   }
 }
 
