@@ -17,7 +17,7 @@ function playRound() {
   computerSelection = getComputerChoice();
   playerSelection = prompt("Rock, Paper, or Scissors?").toLowerCase();
   let result;
-  console.log("You choose " + playerSelection);  // SEE PLAYER SELECTION
+  console.log(`New Round! You choose ${playerSelection}`);  // SEE PLAYER SELECTION
 
   // Conditions for rock
   if (playerSelection === "rock" && computerSelection === "paper") {
@@ -45,7 +45,7 @@ function playRound() {
   } 
   // Conditions for null
   else {
-    result = "Please enter a value!";
+    result = "Please enter a correct value!";
   }
 
   console.log("Computer choice is " + computerSelection); // SEE COMPUTER SELECTION
@@ -62,7 +62,7 @@ function game() {
 
   for (let i = 0; i < 5; i++) {
     let roundResult = playRound();
-    console.log(`Round ${i + 1}: ` + roundResult);
+    console.log(`ROUND ${i + 1}: ${roundResult}`);
     if (roundResult.slice(0,7) === "You win") {
       playerPoint++;
     }
@@ -72,10 +72,8 @@ function game() {
     else if (roundResult === "It's a draw!") {
       // do nothing
     }
-    console.log(`The score so far is: PLAYER: ${playerPoint} ${isPoint(playerPoint)} COMPUTER: ${computerPoint} ${isPoint(computerPoint)}`);
+    console.log(`The score so far is - PLAYER: ${playerPoint} ${isPoint(playerPoint)} COMPUTER: ${computerPoint} ${isPoint(computerPoint)}`);
   }
-
-
 }
 
 function isPoint(point) {
@@ -85,7 +83,6 @@ function isPoint(point) {
     return "points";
   }
 }
-
 
 game();
 
