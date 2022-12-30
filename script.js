@@ -53,7 +53,6 @@ function playRound() {
   return result;
 }
 
-
 // console.log(playRound(playerSelection, computerSelection));
 
 function game() {
