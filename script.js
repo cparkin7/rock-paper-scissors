@@ -16,8 +16,8 @@ function getComputerChoice() {
 function playRound() {
   computerSelection = getComputerChoice();
   playerSelection = prompt("Rock, Paper, or Scissors?").toLowerCase();
-  let result;
   console.log(`New Round! You choose ${playerSelection}`);  // SEE PLAYER SELECTION
+  let result;
 
   // Conditions for rock
   if (playerSelection === "rock" && computerSelection === "paper") {
